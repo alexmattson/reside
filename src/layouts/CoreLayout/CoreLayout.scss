@@ -1,0 +1,14 @@
+@import 'base';
+
+.container {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  position: absolute;
+  z-index: 1
+}
+.children {
+  height: calc(100% - 48px);
+  overflow-y: scroll;
+  padding: 50px
+}

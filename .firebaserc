@@ -1,0 +1,42 @@
+{
+  "projects": {
+    "master": "alex-reside",
+    "prod": "alex-reside"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "version": "${npm_package_version}",
+        "env": "development",
+        "firebase": {
+          "apiKey": "AIzaSyCpM5BwBMQ6zmwsXmbPgT3YxyhWjwnA7WA",
+          "authDomain": "alex-reside.firebaseapp.com",
+          "databaseURL": "https://alex-reside.firebaseio.com",
+          "projectId": "alex-reside",
+          "storageBucket": "alex-reside.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "version": "${npm_package_version}",
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyCpM5BwBMQ6zmwsXmbPgT3YxyhWjwnA7WA",
+          "authDomain": "alex-reside.firebaseapp.com",
+          "databaseURL": "https://alex-reside.firebaseio.com",
+          "projectId": "alex-reside",
+          "storageBucket": "alex-reside.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
+  }
+}
