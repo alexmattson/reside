@@ -5,12 +5,12 @@ import SignupRoute from './Signup'
 import AccountRoute from './Account'
 import UsersRoute from './Users'
 import NotFoundRoute from './NotFound'
-
+import { BASE_PATH } from 'constants'
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
 
 export const createRoutes = store => ({
-  path: '/',
+  path: BASE_PATH + '/',
   component: CoreLayout,
   indexRoute: Home,
   childRoutes: [

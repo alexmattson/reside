@@ -6,6 +6,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
     "build:prod": "echo \"build:prod is deprecated. Use npm run build.\" && npm run build",
     "start": "cross-env NODE_ENV=development webpack-dashboard -p 1234 -c cyan -m -t reside -- node build/scripts/start",
@@ -30,6 +32,7 @@
     "immutable": "^3.8.2",
     "lodash": "^4.17.4",
     "material-ui": "^0.19.4",
+    "moment": "^2.19.3",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise": "^7.1.1",

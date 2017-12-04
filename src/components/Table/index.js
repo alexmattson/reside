@@ -37,14 +37,18 @@ export default class Table extends _Base {
 
   generateRow(row) {
     const { columns } = this.props
-    const colValues = columns.map(col => (
-      <TableRowColumn
-        className={classNames({
-          'cursor-pointer': col.onClick
-        })}>
-        {row[col.field]}
-      </TableRowColumn>
-    ))
+    const colValues = columns.map(col => {
+      const val = row[col.field]
+      const formatted = col.format ? col.format(val) : val
+      return (
+        <TableRowColumn
+          className={classNames({
+            'cursor-pointer': col.onClick
+          })}>
+          {formatted}
+        </TableRowColumn>
+      )
+    })
     return <TableRow>{colValues}</TableRow>
   }
 

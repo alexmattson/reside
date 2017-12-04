@@ -11,6 +11,7 @@ import Search from 'components/Search'
 import Table from 'components/Table'
 import request from 'request'
 import { addError, addSuccess } from 'store/Notifications/NotificationActions'
+import moment from 'moment'
 
 const COLUMNS = [
   {
@@ -23,7 +24,10 @@ const COLUMNS = [
   { field: 'public_gists' },
   { field: 'followers' },
   { field: 'following' },
-  { field: 'created_at' }
+  {
+    field: 'created_at',
+    format: val => moment(val).format('MM/DD/YYYY')
+  }
 ]
 
 const mapStateToProps = ({ firebase, ...props }) => ({

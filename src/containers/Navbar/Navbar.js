@@ -15,7 +15,13 @@ import {
   isLoaded,
   isEmpty
 } from 'react-redux-firebase'
-import { ACCOUNT_PATH, LOGIN_PATH, SIGNUP_PATH, USERS_PATH } from 'constants'
+import {
+  ACCOUNT_PATH,
+  LOGIN_PATH,
+  SIGNUP_PATH,
+  USERS_PATH,
+  BASE_PATH
+} from 'constants'
 import defaultUserImage from 'static/User.png'
 import classes from './Navbar.scss'
 
@@ -54,7 +60,7 @@ export default class Navbar extends Component {
 
   handleLogout = () => {
     this.props.firebase.logout()
-    this.context.router.push('/')
+    this.context.router.push(BASE_PATH)
   }
 
   render() {
