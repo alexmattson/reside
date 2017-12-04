@@ -119,7 +119,9 @@ export default class Navbar extends Component {
     return (
       <AppBar
         title={
-          <Link to={authExists ? USERS_PATH : '/'} className={classes.brand}>
+          <Link
+            to={authExists ? USERS_PATH : BASE_PATH}
+            className={classes.brand}>
             reside
           </Link>
         }

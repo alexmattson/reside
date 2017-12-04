@@ -27,14 +27,14 @@ const Home = props => (
           <h3>Notable Components </h3>
           <ul>
             <li>
-              <b>Notification Handling</b> - There is a general notification
-              handling that is accomplished inside the NotificationHandler. This
-              component is wrapper for 'react-notifications' 'NotificationStack'
-              component. I have also added the redux/component logic for adding
-              a sucess, error, or warning notification. Finally this is all
-              wrapped up nicely in a withNotifications decorator that provides
-              addError, addSuccess, and addWarning functions to a component's
-              props.
+              <b>Notification Handling</b> - A general notification handling
+              system. This component is a wrapper for 'react-notifications'
+              'NotificationStack' component. I have also added the
+              redux/component logic for adding a sucess, error, or warning
+              notification. Finally this is all wrapped up nicely in a
+              withNotifications decorator that provides addError, addSuccess,
+              and addWarning functions to a component's props. Try out the
+              different notifications below:
               <div className="flex-row-center">
                 <FlatButton
                   primary
